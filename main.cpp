@@ -30,6 +30,6 @@ int main() {
     const auto data = std::unique_ptr<Data<int>, decltype(del)>(new Data<int>(10), del);
     const auto data_fp = std::unique_ptr<Data<int>, void(*)(Data<int> *)>(new Data<int>(20), &del_fn);
 
-    std::cout << "size of unique_ptr with lambda custom-deleter: " << sizeof(data) << std::end;
-    std::cout << "size of unique_ptr with function-ptr custom-deleter: " << sizeof(data_fp) << std::end;
+    std::cout << "size of unique_ptr with lambda custom-deleter: " << sizeof(data) << std::endl;
+    std::cout << "size of unique_ptr with function-ptr custom-deleter: " << sizeof(data_fp) << std::endl;
 }
