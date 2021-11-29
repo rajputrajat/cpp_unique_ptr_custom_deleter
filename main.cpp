@@ -19,5 +19,7 @@ int main() {
         delete p_data;
     };
 
-    auto d = std::unique_ptr<int, decltype(del)>(10, del);
+    std::cout << "size of custom deleter 'del': " << sizeof(del) << std::endl;
+
+    auto data = std::unique_ptr<Data<int>, decltype(del)>(new Data<int>(10), del);
 }
