@@ -13,13 +13,13 @@ public:
     }
 };
 
-const auto del_fn(Data<int>* p_data) {
+auto del_fn(Data<int>* p_data) {
     std::cout << "calling custom deleter function" << std::endl;
     delete p_data;
 }
 
 int main() {
-    const auto del = [](Data<int>* p_data) {
+    auto del = [](Data<int>* p_data) {
         std::cout << "calling custom deleter lambda" << std::endl;
         delete p_data;
     };
