@@ -24,9 +24,9 @@ int main() {
         delete p_data;
     };
 
-    std::string astr{ "hey  this is going to be a large string. considering small buffer optimization, we had to do this.   " };
+    //std::string astr{ "hey  this is going to be a large string. considering small buffer optimization, we had to do this.   " };
     const std::string astr{ "hey  this is going to be a large string. considering small buffer optimization, we had to do this.   " };
-    constexpr std::string astr{ "hey  this is going to be a large string. considering small buffer optimization, we had to do this.   " };
+    //constexpr std::string astr{ "hey  this is going to be a large string. considering small buffer optimization, we had to do this.   " };
 
     std::cout << "size of a string: " << sizeof(astr) << std::endl;
 
