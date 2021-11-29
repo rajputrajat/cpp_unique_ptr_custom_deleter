@@ -24,7 +24,7 @@ int main() {
         delete p_data;
     };
 
-    const std::string astr{ "hey     " };
+    const std::string astr{ "hey  this is going to be a large string. considering small buffer optimization, we had to do this.   " };
     std::cout << "size of a string: " << sizeof(astr) << std::endl;
 
     const short shint{ 100 };
